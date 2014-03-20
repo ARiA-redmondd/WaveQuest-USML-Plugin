@@ -108,7 +108,6 @@ BOOST_AUTO_TEST_CASE(datagridquad_test){
   interpolated_rho = grid->interpolate(location);
   BOOST_CHECK_CLOSE(interpolated_rho,6367208.77774376702,1e-3);
 
-  delete tree;
   delete grid;
   delete[] boundary_points;
 }
