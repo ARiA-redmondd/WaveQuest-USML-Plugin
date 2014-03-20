@@ -1,6 +1,5 @@
 /**
- * @file data_grid.h
- * N-dimensional data set and its associated axes.
+ * @file data_grid_quad.h
  */
 #ifndef USML_TYPES_DATA_GRID_QUAD_H
 #define USML_TYPES_DATA_GRID_QUAD_H
@@ -15,13 +14,12 @@ using namespace usml::ublas;
 namespace usml {
 namespace types {
 
-/// @ingroup data_grid
+/// @ingroup data_grid_quad
 /// @{
 
 
 /**
- * N-dimensional data set and its associated axes.
- * Supports interpolation in any number of dimensions.
+ * Supports interpolation.
  *
  * @param  DATA_TYPE    Type of data to be interpolated. Must support +,-,*,/
  *                      with itself and double precision scalars.
@@ -31,8 +29,6 @@ namespace types {
 template<class DATA_TYPE, unsigned NUM_DIMS> class data_grid_quad
 {
 
-    //*************************************************************************
-    // Axis and Data properties
 
 protected:
 
@@ -269,30 +265,11 @@ public:
       return interpolated_depth;
     }
 
-/* protected: */
-
-/*     /\** */
-/*      * Default constructor for sub-classes */
-/*      *\/ */
-/*     data_grid_quad() { */
-
-/*     	for (unsigned n = 0; n < NUM_DIMS; ++n) { */
-/*     		_axis[n] = NULL; */
-/*     	} */
-/*     	_data = NULL; */
-/*     } */
 
 public:
 
      data_grid_quad(quadtree* tree, double origin_height, int num_boundary_points, double* boundary_points)
     {
-        /* size_t N = 1; */
-        /* for (unsigned n = 0; n < NUM_DIMS; ++n) { */
-        /*     _axis[n] = axis[n]->clone(); */
-        /*     N *= _axis[n]->size(); */
-        /* } */
-        /* _data = new DATA_TYPE[N]; */
-        /* memset(_data, 0, N * sizeof(DATA_TYPE)); */
 	_tree = tree;
 	_height_at_origin = origin_height;
 	_num_boundary_points = num_boundary_points;
