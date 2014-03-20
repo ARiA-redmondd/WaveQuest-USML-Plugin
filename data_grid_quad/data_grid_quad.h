@@ -281,14 +281,7 @@ public:
      */
     ~data_grid_quad()
     {
-        /* for (unsigned n = 0; n < NUM_DIMS; ++n) { */
-        /* 	if (_axis[n] != NULL) { */
-        /* 		delete _axis[n]; */
-        /* 	} */
-        /* } */
-        /* if (_data != NULL) { */
-        /* 	delete[] _data; */
-        /* } */
+	delete _tree;
     }
 
 }; // end data_grid_quad class
