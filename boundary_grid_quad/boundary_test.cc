@@ -238,7 +238,6 @@ BOOST_AUTO_TEST_CASE(quad_boundary_test){
   
   BOOST_CHECK_CLOSE(rho,6367208.82770177815,1e-4);
 
-  delete tree;
   delete boundary;
   delete reflection;
   delete[] boundary_points;
