@@ -72,10 +72,10 @@ public :
 
 private : 
   long main_branch;
-  int class_maxX;
-  int class_maxY;
-  int class_minX;
-  int class_minY;
+  double class_maxX;
+  double class_maxY;
+  double class_minX;
+  double class_minY;
   long temp_num;
   std::list<listofpoints> data;
   long max_branch;
